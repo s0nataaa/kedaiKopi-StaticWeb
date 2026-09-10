@@ -220,7 +220,7 @@ ul, ol {
 .introduction-wrapper {
     background-color: #2E1A2E;
     padding: 0 30px;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -231,7 +231,7 @@ ul, ol {
 
 .introduction h1 {
     text-align: center;
-    margin: 50px 0 20px 0;
+    margin: 40px 0 20px 0;
     font-weight: bold;
     font-family: "Fraunces", serif;
 }
@@ -253,20 +253,23 @@ ul, ol {
 }
 
 .intro-content-right {
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
 }
 
 .intro-content-left img {
     width: 100%;
+    margin-bottom: 25%;
 }
 
 
 .intro-content-right p {
     text-align: left;
-    justify-content: flex-end;
     font-weight: 600;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .intro-about-cta {
@@ -275,8 +278,9 @@ ul, ol {
     text-decoration: none;
     color: #2E1A2E;
     font-weight: 600;
-    padding: 17px 100px;
+    padding: 14px 100px;
     transition: 0.25s;
+    margin: 10px 0 45px 0;
 }
 
 .intro-about-cta:hover {
@@ -285,6 +289,10 @@ ul, ol {
     border-color: white;
 }
 
+
+.advantages-wrapper {
+    background: #EDE6DA;
+}
 
 
 
