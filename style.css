@@ -288,11 +288,6 @@ ul, ol {
     border-color: white;
 }
 
-
-.advantages-wrapper {
-    background: #EDE6DA;
-}
-
 .advantages-wrapper {
     background: #EDE6DA;
     padding: 0 30px;
@@ -363,6 +358,179 @@ ul, ol {
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+
+.best-seller-wrapper {
+    background: #FFF8EF;
+    padding: 0 30px;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.best-seller-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.best-seller-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-seller h1 {
+    font-family: "Fraunces", serif;
+    text-align: left;
+    margin: 0 0 15px 0;
+    font-size: 50px;
+    padding: 0px 20px;
+    text-decoration: underline solid #A8823C 3px;
+    text-underline-offset: 8px;
+}
+
+.best-seller-tagline {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #A8823C;
+    font-weight: 600;
+    text-align: left;
+    margin: 30px 0 0 20px;
+    font-size: 15px;
+}
+
+.best-seller-menu-cta {
+    border: 2px solid #2E1A2E;
+    background: transparent;
+    text-decoration: none;
+    color: #2E1A2E;
+    letter-spacing: 2px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 12px 6px;
+    margin-bottom: 20px;
+    transition: 0.25s;
+}
+
+.best-seller-menu-cta:hover {
+    background-color: white;
+    font-weight: bold;
+}
+
+.best-seller-card-wrapper {
+    text-decoration: none;
+    color: inherit;
+    margin: 25px;
+    display: block;
+    transition: 0.25s;
+}
+
+.best-seller-card-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgb(46 26 46 / 20%);
+}
+
+.best-seller-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 750px;
+}
+
+.best-seller-card-image,
+.best-seller-card-info {
+    height: 50%;
+}
+
+.best-seller-card-info {
+    background: white;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.best-seller-card-desc {
+    color: rgb(33 37 41 / 65%);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 45px;
+    letter-spacing: 1.5px;
+}
+
+.best-seller-card-brew {
+    color: rgb(33 37 41 / 65%);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.best-seller-card-info h3 {
+    font-family: "Fraunces", serif;
+    color: #2E1A2E;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+.best-seller-card-info hr {
+    border: 0;
+    border-top: 2.5px solid #2E1A2E;
+}
+
+.best-seller-card-image {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.img-1 {
+    background-image: url(assets/images/menu-home/menu1.jpeg);
+}
+
+.img-2 {
+    background-image: url(assets/images/menu-home/menu2.jpeg);
+}
+
+.img-3 {
+    background-image: url(assets/images/menu-home/menu3.jpeg);
+}
+
+.img-4 {
+    background-image: url(assets/images/menu-home/menu4.jpeg);
+}
+
+.best-seller-card h4 {
+    background: #2E1A2E;
+    color: white;
+    display: inline-block;
+    padding: 8px 30px;
+    letter-spacing: 2.5px;
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.best-seller-card-price {
+    background: white;
+    color: #2E1A2E;
+    display: inline-block;
+    padding: 8px 25px;
+    font-family: "Fraunces", serif;
+    font-size: 14px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1;
+    margin: 0;
+}
+
+.best-seller-card-row {
+    display: flex;
+    flex-direction: row;
+}
+
 
 
 
