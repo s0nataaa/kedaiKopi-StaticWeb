@@ -688,15 +688,16 @@ ul, ol {
 }
 
 .footer-news-email h3 {
+    color: #A8823C;
     font-family: "Fraunces", serif;
     font-size: 18px;
+    letter-spacing: 1.5px;
     margin: 0;
 }
 
 .footer-news-email p {
     font-family: "Plus Jakarta Sans", serif;
     font-size: 13px;
-    color: #cccccc;
     margin: 0;
 }
 
