@@ -542,6 +542,195 @@ ul, ol {
     flex-direction: row;
 }
 
+.quote-home-wrapper {
+    min-height: 100vh;
+    background: url(assets/images/quotes-img.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.quote-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
+.quote-home-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 45%);
+    z-index: 1;
+}
 
+.quote-home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin: 0 50px;
+    gap: 25px;
+}
+
+.quote-home-content .bi-quote {
+    font-size: 80px;
+    color: white;
+    line-height: 1;
+}
+
+.quote-home-content h1 {
+    margin: 0;
+    color: white;
+    font-size: 60px;
+    font-family: "Fraunces", serif;
+}
+
+.quote-home-info {
+    letter-spacing: 1.5px;
+    font-size: larger;
+}
+
+.quote-home-info h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+}
+
+.quote-home-info h4 {
+    font-family: "Plus Jakarta Sans", serif;
+    font-weight: 600;
+    text-decoration: underline solid #A8823C 3px;
+    text-underline-offset: -30px;
+}
+
+.footer-wrapper {
+    background-color: #2E1A2E;
+    padding: 2.5rem 4rem 1.5rem 4rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-top h4 {
+    color: #A8823C;
+    font-weight: 500;
+    font-family: "Plus Jakarta Sans", serif;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+}
+
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    gap: 10px;
+}
+
+.footer-about-brand h2 {
+    color: white;
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.footer-about p {
+    font-family: "Plus Jakarta Sans", serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0;
+}
+
+.footer-img img {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 8px;
+    transition: all 0.25s linear;
+}
+
+.footer-img img:hover {
+    border-top-left-radius: 40px;
+}
+
+.footer-news {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+}
+
+.footer-news-email {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-news-email h3 {
+    font-family: "Fraunces", serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-news-email p {
+    font-family: "Plus Jakarta Sans", serif;
+    font-size: 13px;
+    color: #cccccc;
+    margin: 0;
+}
+
+.footer-news-email input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #1f111f;
+    color: white;
+    font-size: 13px;
+}
+
+.footer-news-social {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.footer-news-social img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 28px;
+    max-height: 28px;
+    transition: all 0.2s ease;
+}
+
+.footer-news-social img:hover {
+    transform: scale(1.15);
+}
+
+.footer-bot p {
+    font-family: "Plus Jakarta Sans", serif;
+    font-size: 12px;
+    color: #aaaaaa;
+    text-align: left;
+    margin: 0;
+}
