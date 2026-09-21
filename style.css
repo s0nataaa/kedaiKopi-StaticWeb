@@ -715,3 +715,13 @@ ul, ol {
     .footer-wrapper { padding: 2rem 1.5rem 1rem; }
 }
 
+.marquee {
+    font-family: "Fraunces", serif;
+    display: block;
+    background-color: #A8823C;
+    color: #A8823C;
+    -webkit-text-stroke: 1px #2E1A2E;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
