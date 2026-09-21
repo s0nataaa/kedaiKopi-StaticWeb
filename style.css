@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
+:root {
+    --font-1: "Fraunces", serif;
+    --font-2: "Plus Jakarta Sans", sans-serif;
+}
+
 html {
     scrollbar-width: none; 
 }
@@ -278,7 +283,7 @@ ul, ol {
 
 .intro-about-cta {
     background-color: white;
-    border: 3px solid #A8823C;
+    border: 4px solid #A8823C;
     text-decoration: none;
     color: #2E1A2E;
     font-weight: 600;
@@ -359,7 +364,7 @@ ul, ol {
 
 .best-seller-wrapper {
     background: #FFF8EF;
-    padding: 0 30px;
+    padding: 0 30px 60px;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -403,13 +408,15 @@ ul, ol {
     font-family: 'Plus Jakarta Sans', sans-serif;
     padding: 12px 6px;
     margin-bottom: 20px;
-    transition: 0.25s;
+    transition: 0.25s linear;
+    font-weight: bold;
 }
 
 .best-seller-menu-cta:hover {
     color: #2E1A2E;
     background-color: white;
     font-weight: bold;
+    box-shadow: 0 8px 12px rgb(46 26 46 / 25%);
 }
 
 .best-seller-card-wrapper {
@@ -429,6 +436,7 @@ ul, ol {
     flex-direction: column;
     width: 100%;
     height: 100%;
+
 }
 
 .best-seller-card-info {
@@ -615,10 +623,17 @@ ul, ol {
 .footer-about-brand h2 {
     color: white;
     font-family: "Fraunces", serif;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 2px;
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 2px;
+}
+
+.footer-about-brand h4 {
+    color: #A8823C;
+    font-family: var(--font-2);
+    font-weight: 500;
+    letter-spacing: 1.5px;
 }
 
 .footer-about p {
@@ -629,17 +644,25 @@ ul, ol {
     margin: 0;
 }
 
-.footer-img img {
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
-    width: 100%;
-    max-width: 150px;
-    border-radius: 8px;
-    transition: all 0.25s linear;
+.foooter-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.footer-img img:hover {
-    border-top-left-radius: 40px;
+.footer-sub-title {
+    font-family: var(--font-1);
+    color: #A8823C;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+.footer-navigation a {
+    text-decoration: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #cccccc;
 }
 
 .footer-news {
@@ -670,11 +693,29 @@ ul, ol {
 
 .footer-news-email input {
     padding: 8px 12px;
-    border-radius: 6px;
     border: 1px solid #555;
     background-color: #1f111f;
     color: white;
     font-size: 13px;
+}
+
+.footer-news-email-submit {
+    font-family: var(--font-2);
+    letter-spacing: 1.5px;
+    background-color: #1f111f;
+    border: 3px solid #A8823C;
+    color: white;
+    transition: all 0.25s linear;
+    font-weight: 600;
+    padding: 7px;
+    font-size: 13px;
+}
+
+.footer-news-email-submit:hover {
+    background-color: white;
+    border-color: white;
+    color: #1f111f;
+    box-shadow: 0 12px 16px rgb(255 255 255 / 25%);
 }
 
 .footer-news-social {
@@ -701,18 +742,6 @@ ul, ol {
     color: #aaaaaa;
     text-align: left;
     margin: 0;
-}
-
-@media (max-width: 767.98px) {
-    .header-inner { padding: 12px 16px; gap: 8px; }
-    .brand-name { font-size: 18px; }
-    .main-nav { flex: 0 0 100%; background: #FFF8EF; padding: 12px 0; }
-    .hero-content p { font-size: 32px; }
-    .intro-content-right p { font-size: 20px; }
-    .advantages h1, .best-seller h1 { font-size: 30px; }
-    .advantages-card-wrapper p { font-size: 16px; }
-    .quote-home-content h1 { font-size: 28px; }
-    .footer-wrapper { padding: 2rem 1.5rem 1rem; }
 }
 
 .marquee {
@@ -746,4 +775,29 @@ ul, ol {
     100% {
         transform: translateX(-50%);
     }
+}
+
+.footer-desc {
+    color: #cccccc;
+    font-family: var(--font-2);
+}
+
+.footer hr {
+    margin: 0;
+}
+
+.footer-bot p {
+    font-size: 14px;
+}
+
+@media (max-width: 767.98px) {
+    .header-inner { padding: 12px 16px; gap: 8px; }
+    .brand-name { font-size: 18px; }
+    .main-nav { flex: 0 0 100%; background: #FFF8EF; padding: 12px 0; }
+    .hero-content p { font-size: 32px; }
+    .intro-content-right p { font-size: 20px; }
+    .advantages h1, .best-seller h1 { font-size: 30px; }
+    .advantages-card-wrapper p { font-size: 16px; }
+    .quote-home-content h1 { font-size: 28px; }
+    .footer-wrapper { padding: 2rem 1.5rem 1rem; }
 }
