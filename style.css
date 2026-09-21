@@ -716,12 +716,34 @@ ul, ol {
 }
 
 .marquee {
-    font-family: "Fraunces", serif;
-    display: block;
     background-color: #A8823C;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee-line {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-line span {
+    font-family: "Fraunces", serif;
+    display: inline-block;
     color: #A8823C;
     -webkit-text-stroke: 1px #2E1A2E;
-    font-size: 24px;
+    font-size: 36px;
+    line-height: 60px;
     letter-spacing: 2px;
-    line-height: 40px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
