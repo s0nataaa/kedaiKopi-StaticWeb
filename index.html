@@ -13,28 +13,33 @@
 <body>
     
     <header class="site-header">
-        <div class="header-inner">
+        <div class="header-inner flex-wrap flex-md-nowrap">
             <nav class="nav-left">
                 <a href="">
                     <img class="logo-image" src="assets/images/logo.png" alt="logo">
                     <span class="brand-text">
                         <span class="brand-name">Kedai Kopi Nusantara</span>
-                        <span class="brand-tagline">SPESIALISASI SINGLE ORIGIN INDONESIA</span>
+                        <span class="brand-tagline d-none d-md-block">SPESIALISASI SINGLE ORIGIN INDONESIA</span>
                     </span>
                 </a>
             </nav>
 
-            <nav id="home-nav" class="main-nav">
-                <ul class="navlist">
+            <button class="btn border-0 p-0 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#home-nav" aria-label="Menu">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <nav id="home-nav" class="main-nav collapse d-md-flex order-last order-md-0">
+                <ul class="navlist flex-column flex-md-row align-items-center">
                     <li><a class="active" href="/">HOME</a></li>   
                     <li><a href="/menu.html">MENU</a></li>   
                     <li><a href="/gallery.html">GALLERY</a></li>   
                     <li><a href="/contact.html">CONTACT</a></li>   
                     <li><a href="/about.html">ABOUT</a></li>   
+                    <li class="d-md-none"><a href="#">KERANJANG</a></li>
                 </ul>
             </nav>
 
-            <nav class="nav-right">
+            <nav class="nav-right d-none d-md-flex">
                 <div class="buy-basket">
                     <p>KERANJANG</p>
                 </div>
@@ -61,11 +66,11 @@
     <section class="introduction-wrapper">
         <div class="introduction">
         <h1>LET'S KNOW ABOUT US</h1>
-            <div class="intro-content">
-                <div class="intro-content-left">
+            <div class="intro-content row g-5">
+                <div class="intro-content-left col-12 col-md-6">
                     <img src="assets/images/bungkuskopi.jpg" alt="">
                 </div>
-                <div class="intro-content-right">
+                <div class="intro-content-right col-12 col-md-6">
                     <p>Kedai Kopi Nusantara adalah tempat untuk 
                         menikmati kopi single origin Indonesia dalam suasana 
                         yang nyaman dan santai. <br> 
@@ -84,32 +89,41 @@
         <div class="advantages">
             <p class="advantages-tagline">THE ESSENCE OF NUSANTARA</p>
             <h1>Rooted in Origin, Refined in Craft</h1>
-            <div class="advantages-card">
-                <div class="advantages-card-wrapper">
-                    <img class="advantages-icon" src="assets/images/logo.png" alt="icon">
-                    <h4>ADVANTAGE 1</h4>
-                    <h3>100% Biji Single Origin Nusantara</h3>
-                    <p>Kurasi langsung dari petani terpercaya di Gayo, Tana Toraja, Kintamani Bali, dan Bajawa Flores tanpa campuran varietas luar.</p>
+            <div class="advantages-card row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="advantages-card-wrapper h-100">
+                        <img class="advantages-icon" src="assets/images/logo.png" alt="icon">
+                        <h4>ADVANTAGE 1</h4>
+                        <h3>100% Biji Single Origin Nusantara</h3>
+                        <p>Kurasi langsung dari petani terpercaya di Gayo, Tana Toraja, Kintamani Bali, dan Bajawa Flores tanpa campuran varietas luar.</p>
+                    </div>
                 </div>
             
-                <div class="advantages-card-wrapper">
-                    <img class="advantages-icon" src="assets/images/logo.png" alt="icon">
-                    <h4>ADVANTAGE 2</h4>
-                    <h3>Sangrai Segar Mingguan</h3>
-                    <p>Profil sangrai artisan light-to-medium setiap minggu untuk menjaga kejernihan notes alami terroir vulkanik masing-masing biji.</p>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="advantages-card-wrapper h-100">
+                        <img class="advantages-icon" src="assets/images/logo.png" alt="icon">
+                        <h4>ADVANTAGE 2</h4>
+                        <h3>Sangrai Segar Mingguan</h3>
+                        <p>Profil sangrai artisan light-to-medium setiap minggu untuk menjaga kejernihan notes alami terroir vulkanik masing-masing biji.</p>
+                    </div>
                 </div>
 
-                <div class="advantages-card-wrapper">
-                    <img class="advantages-icon" src="assets/images/logo.png" alt="icon">
-                    <h4>ADVANTAGE 3</h4>
-                    <h3>Barista Bersertifikasi & Manual Brew Presisi</h3>
-                    <p>Kurasi langsung dari petani terpercaya di Gayo, Tana Toraja, Kintamani Bali, dan Bajawa Flores tanpa campuran varietas luar.</p>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="advantages-card-wrapper h-100">
+                        <img class="advantages-icon" src="assets/images/logo.png" alt="icon">
+                        <h4>ADVANTAGE 3</h4>
+                        <h3>Barista Bersertifikasi & Manual Brew Presisi</h3>
+                        <p>Kurasi langsung dari petani terpercaya di Gayo, Tana Toraja, Kintamani Bali, dan Bajawa Flores tanpa campuran varietas luar.</p>
+                    </div>
                 </div>
-                <div class="advantages-card-wrapper">
-                    <img class="advantages-icon" src="assets/images/logo.png" alt="icon">
-                    <h4>ADVANTAGE 4</h4>
-                    <h3>Suasana Tenang & Hangat</h3>
-                    <p>Kurasi langsung dari petani terpercaya di Gayo, Tana Toraja, Kintamani Bali, dan Bajawa Flores tanpa campuran varietas luar.</p>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="advantages-card-wrapper h-100">
+                        <img class="advantages-icon" src="assets/images/logo.png" alt="icon">
+                        <h4>ADVANTAGE 4</h4>
+                        <h3>Suasana Tenang & Hangat</h3>
+                        <p>Kurasi langsung dari petani terpercaya di Gayo, Tana Toraja, Kintamani Bali, dan Bajawa Flores tanpa campuran varietas luar.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,7 +131,7 @@
 
     <section class="best-seller-wrapper">
         <div class="best-seller">
-            <div class="best-seller-header">
+            <div class="best-seller-header d-flex flex-column flex-md-row align-items-start align-items-md-end gap-3">
                 <div class="best-seller-title">
                     <p class="best-seller-tagline">A TASTE OF NUSANTARA</p>
                     <h1>Kopi Kedai Nusantara Finest Selection</h1>
@@ -126,93 +140,101 @@
                 <a class="best-seller-menu-cta" href="/menu.html">SEE ALL OUR COLLECTION</a>
             </div>
 
-            <div class="best-seller-card-row">
-                <a href="menu.html" class="best-seller-card-wrapper">
-                    <div class="best-seller-card">
-                        <div class="best-seller-card-image img-1">
-                            <h4>ACEH</h4>
-                            <p class="best-seller-card-price">Rp. 30.000</p>
-                        </div>
+            <div class="best-seller-card-row row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <a href="menu.html" class="best-seller-card-wrapper h-100">
+                        <div class="best-seller-card">
+                            <div class="best-seller-card-image img-1">
+                                <h4>ACEH</h4>
+                                <p class="best-seller-card-price">Rp. 30.000</p>
+                            </div>
 
-                        <div class="best-seller-card-info">
-                            <h3>Gayo Natural</h3>
-                            
-                            <p class="best-seller-card-desc">Proses penjemuran buah utuh 
-                                selama 30 hari menghasilkan 
-                                cita rasa manis buah tropis yang 
-                                pekat dan aroma semerbak.</p>
-                            <hr>
-                            <p class="best-seller-card-brew">V60 Filter</p>
+                            <div class="best-seller-card-info">
+                                <h3>Gayo Natural</h3>
+                                
+                                <p class="best-seller-card-desc">Proses penjemuran buah utuh 
+                                    selama 30 hari menghasilkan 
+                                    cita rasa manis buah tropis yang 
+                                    pekat dan aroma semerbak.</p>
+                                <hr>
+                                <p class="best-seller-card-brew">V60 Filter</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
                 
-                <a href="menu.html" class="best-seller-card-wrapper">
+                <div class="col">
+                    <a href="menu.html" class="best-seller-card-wrapper h-100">
 
-                    <div class="best-seller-card">
-                        <div class="best-seller-card-image img-2">
-                            <h4>ACEH</h4>
-                            <p class="best-seller-card-price">Rp. 30.000</p>
-                        </div>
+                        <div class="best-seller-card">
+                            <div class="best-seller-card-image img-2">
+                                <h4>ACEH</h4>
+                                <p class="best-seller-card-price">Rp. 30.000</p>
+                            </div>
 
-                        <div class="best-seller-card-info">
-                            <h3>Gayo Natural</h3>
-                            
-                            <p class="best-seller-card-desc">Proses penjemuran buah utuh 
-                                selama 30 hari menghasilkan 
-                                cita rasa manis buah tropis yang 
-                                pekat dan aroma semerbak.</p>
-                            <hr>
-                            <p class="best-seller-card-brew">V60 Filter</p>
+                            <div class="best-seller-card-info">
+                                <h3>Gayo Natural</h3>
+                                
+                                <p class="best-seller-card-desc">Proses penjemuran buah utuh 
+                                    selama 30 hari menghasilkan 
+                                    cita rasa manis buah tropis yang 
+                                    pekat dan aroma semerbak.</p>
+                                <hr>
+                                <p class="best-seller-card-brew">V60 Filter</p>
+                            </div>
+                        
                         </div>
-                    
-                    </div>
-                </a>
+                    </a>
+                </div>
 
-                <a href="menu.html" class="best-seller-card-wrapper">
-        
-                    <div class="best-seller-card">
-                        <div class="best-seller-card-image img-3">
-                            <h4>ACEH</h4>
-                            <p class="best-seller-card-price">Rp. 30.000</p>
+                <div class="col">
+                    <a href="menu.html" class="best-seller-card-wrapper h-100">
+            
+                        <div class="best-seller-card">
+                            <div class="best-seller-card-image img-3">
+                                <h4>ACEH</h4>
+                                <p class="best-seller-card-price">Rp. 30.000</p>
+                            </div>
+            
+                            <div class="best-seller-card-info">
+                                <h3>Gayo Natural</h3>
+                                
+                                <p class="best-seller-card-desc">Proses penjemuran buah utuh 
+                                    selama 30 hari menghasilkan 
+                                    cita rasa manis buah tropis yang 
+                                    pekat dan aroma semerbak.</p>
+                                <hr>
+                                <p class="best-seller-card-brew">V60 Filter</p>
+                            </div>
+                        
                         </div>
-        
-                        <div class="best-seller-card-info">
-                            <h3>Gayo Natural</h3>
-                            
-                            <p class="best-seller-card-desc">Proses penjemuran buah utuh 
-                                selama 30 hari menghasilkan 
-                                cita rasa manis buah tropis yang 
-                                pekat dan aroma semerbak.</p>
-                            <hr>
-                            <p class="best-seller-card-brew">V60 Filter</p>
-                        </div>
-                    
-                    </div>
-                </a>
+                    </a>
+                </div>
                 
-                <a href="menu.html" class="best-seller-card-wrapper">
-        
-                    <div class="best-seller-card">
-                        <div class="best-seller-card-image img-4">
-                            <h4>ACEH</h4>
-                            <p class="best-seller-card-price">Rp. 30.000</p>
+                <div class="col">
+                    <a href="menu.html" class="best-seller-card-wrapper h-100">
+            
+                        <div class="best-seller-card">
+                            <div class="best-seller-card-image img-4">
+                                <h4>ACEH</h4>
+                                <p class="best-seller-card-price">Rp. 30.000</p>
+                            </div>
+            
+                            <div class="best-seller-card-info">
+                                <h3>Gayo Natural</h3>
+                                
+                                <p class="best-seller-card-desc">Proses penjemuran buah utuh 
+                                    selama 30 hari menghasilkan 
+                                    cita rasa manis buah tropis yang 
+                                    pekat dan aroma semerbak.</p>
+                                <hr>
+                                <p class="best-seller-card-brew">V60 Filter</p>
+                            </div>
                         </div>
-        
-                        <div class="best-seller-card-info">
-                            <h3>Gayo Natural</h3>
-                            
-                            <p class="best-seller-card-desc">Proses penjemuran buah utuh 
-                                selama 30 hari menghasilkan 
-                                cita rasa manis buah tropis yang 
-                                pekat dan aroma semerbak.</p>
-                            <hr>
-                            <p class="best-seller-card-brew">V60 Filter</p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
     </section>
 
     <section class="quote-home-wrapper">
@@ -233,10 +255,12 @@
         </div>
     </section>
 
+    <marquee class="marquee" scrollamount="6">KEDAI KOPI NUSANTARA • KEDAI KOPI NUSANTARA • KEDAI KOPI NUSANTARA • KEDAI KOPI NUSANTARA</marquee>
+
     <footer class="footer-wrapper text-white">
         <div class="footer">
-            <div class="footer-top">
-                <div class="footer-about">
+            <div class="footer-top row g-4">
+                <div class="footer-about col-12 col-md-5">
                     <div class="footer-about-brand">
                         <h2>Kedai Kopi Nusantara</h2>
                         <h4>House Of Nusantara Coffee</h4>
@@ -245,11 +269,11 @@
                     <h4>100% Single Origin & Authenthic Indonesia</h4>
                 </div>
 
-                <div class="footer-img">
+                <div class="footer-img col-6 col-md-2">
                     <img src="assets/images/bungkuskopi.jpg" alt="">
                 </div>
                 
-                <div class="footer-news">
+                <div class="footer-news col-12 col-md-5">
                     <div class="footer-news-email">
                         <h3>Kabar Panen</h3>
                         <p>Never miss a drop! Get our latest news to your inbox</p>

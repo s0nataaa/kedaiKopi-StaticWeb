@@ -160,6 +160,10 @@ ul, ol {
     cursor: pointer;
 }
 
+.buy-basket p {
+    margin: 13px 0;
+}
+
 .nav-line {
     border-bottom: 3px solid #FFF8EF;
 }
@@ -247,16 +251,6 @@ ul, ol {
     font-family: "Fraunces", serif;
 }
 
-.intro-content {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-
-.intro-content-left, .intro-content-right {
-    max-width: 50%;
-}
-
 .intro-content-left {
     display: flex;
     justify-content: center;
@@ -334,15 +328,8 @@ ul, ol {
     margin: 30px 0 0 20px ;
 }
 
-.advantages-card {
-    display: flex;
-    flex-direction: row;
-}
-
 .advantages-card-wrapper {
     background: white;
-    max-width: 25%;
-    margin: 25px;
     padding: 24px;
     min-height: 400px;
     border: 3px solid #A8823C;
@@ -380,9 +367,7 @@ ul, ol {
 
 .best-seller-header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
 }
 
 .best-seller-title {
@@ -422,6 +407,7 @@ ul, ol {
 }
 
 .best-seller-menu-cta:hover {
+    color: #2E1A2E;
     background-color: white;
     font-weight: bold;
 }
@@ -429,7 +415,6 @@ ul, ol {
 .best-seller-card-wrapper {
     text-decoration: none;
     color: inherit;
-    margin: 25px;
     display: block;
     transition: 0.25s;
 }
@@ -443,18 +428,14 @@ ul, ol {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 750px;
-}
-
-.best-seller-card-image,
-.best-seller-card-info {
-    height: 50%;
+    height: 100%;
 }
 
 .best-seller-card-info {
     background: white;
     padding: 24px;
     box-sizing: border-box;
+    flex: 1;
 }
 
 .best-seller-card-desc {
@@ -490,6 +471,7 @@ ul, ol {
     background-size: cover;
     background-position: center;
     position: relative;
+    height: 300px;
 }
 
 .img-1 {
@@ -535,11 +517,6 @@ ul, ol {
     bottom: 15px;
     z-index: 1;
     margin: 0;
-}
-
-.best-seller-card-row {
-    display: flex;
-    flex-direction: row;
 }
 
 .quote-home-wrapper {
@@ -621,14 +598,6 @@ ul, ol {
     gap: 20px;
 }
 
-.footer-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-}
-
 .footer-top h4 {
     color: #A8823C;
     font-weight: 500;
@@ -640,7 +609,6 @@ ul, ol {
 .footer-about {
     display: flex;
     flex-direction: column;
-    width: 35%;
     gap: 10px;
 }
 
@@ -678,7 +646,6 @@ ul, ol {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 30%;
 }
 
 .footer-news-email {
@@ -735,3 +702,16 @@ ul, ol {
     text-align: left;
     margin: 0;
 }
+
+@media (max-width: 767.98px) {
+    .header-inner { padding: 12px 16px; gap: 8px; }
+    .brand-name { font-size: 18px; }
+    .main-nav { flex: 0 0 100%; background: #FFF8EF; padding: 12px 0; }
+    .hero-content p { font-size: 32px; }
+    .intro-content-right p { font-size: 20px; }
+    .advantages h1, .best-seller h1 { font-size: 30px; }
+    .advantages-card-wrapper p { font-size: 16px; }
+    .quote-home-content h1 { font-size: 28px; }
+    .footer-wrapper { padding: 2rem 1.5rem 1rem; }
+}
+
