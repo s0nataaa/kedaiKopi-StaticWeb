@@ -1022,3 +1022,45 @@ ul, ol {
     height: 100%;
     object-fit: cover;
 }
+
+/*-----------Gallery--------*/
+
+.gallery-header-wrapper {
+    background: #EDE6DA;
+    padding: 4.5rem 4rem;
+}
+
+.gallery-header img {
+    border: 3px solid #FFF8EF;
+    transition: transform 0.25s linear, box-shadow 0.3s ease;
+}
+
+.gallery-header img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.gallery-photo-grid-wrapper {
+    background: #2E1A2E;
+    padding: 4rem 3.5rem;
+}
+
+.gallery-photo-grid {
+    display: flex;
+    gap: 50px;
+}
+
+.gallery-photo-item {
+    width: 20%;
+}
+
+.gallery-photo-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-photo-item img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+}
