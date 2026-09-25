@@ -45,26 +45,20 @@ ul, ol {
 
 .site-header {
     width: 100%;
-    background: rgb(255 248 239 / 0%);
+    background: rgb(255 248 239 / calc(var(--header-opacity, 0) * 100%));
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgb(168 130 60 / 0%);
-
-    animation: navbar-scroll linear both;
-    animation-duration: 1s;
-    animation-timeline: scroll();
-    animation-range: 0 300px;
-
+    border-bottom: 1px solid rgb(168 130 60 / calc(var(--header-opacity, 0) * 100%));
+    
+    transition: background 0.25s ease, border-color 0.3s ease, transform 0.25s ease;
 }
 
-@keyframes navbar-scroll {
-    to {
-        background: rgb(255 248 239 / 100%);
-        border-bottom-color: rgb(168 130 60 / 100%);
-    }
+.site-header.hidden {
+    transform: translateY(-90%);
 }
+
 
 .header-inner {
     max-width: 1400px;
@@ -111,6 +105,7 @@ ul, ol {
     text-decoration: underline solid #A8823C 3px;
     text-underline-offset: 8px;
 }
+
 
 .brand-name {
     font-size: 24px;
@@ -231,16 +226,16 @@ ul, ol {
 .hero-content a:hover {
     color: #2E1A2E;
     background: white;
-    border-color: white;
+    border-color: transparent;
     font-weight: bold;
     transform: translateY(-4px);
     box-shadow: 0 8px 16px white;
 }
 
+
 .introduction-wrapper {
     background-color: #2E1A2E;
     padding: 0 30px;
-    min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -301,7 +296,7 @@ ul, ol {
 .advantages-wrapper {
     background: #EDE6DA;
     padding: 0 30px;
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     overflow: hidden;
 }
@@ -340,17 +335,19 @@ ul, ol {
     border: 3px solid #A8823C;
 }
 
-.advantages-card-wrapper h4 {
-    color: #8A4A38;
+.advantages-card-wrapper .advantage-label {
+    color: #A8823C;
     letter-spacing: 2.5px;
+    font-size: 21px;
+    font-weight: 600;
 }
 
-.advantages-card-wrapper h3 {
+.advantages-card-wrapper h2 {
     font-family: "Fraunces", serif;
     font-weight: 500;
     font-size: 24px;
 }
-.advantages-card-wrapper p {
+.advantages-card-wrapper .advantage-desc {
     color: rgb(33 37 41 / 65%);
     font-size: 24px;
 }
@@ -462,7 +459,7 @@ ul, ol {
     margin-top: 30px;
 }
 
-.best-seller-card-info h3 {
+.best-seller-card-info h2 {
     font-family: "Fraunces", serif;
     color: #2E1A2E;
     font-size: 28px;
@@ -498,7 +495,7 @@ ul, ol {
     background-image: url(assets/images/menu-home/menu4.jpeg);
 }
 
-.best-seller-card h4 {
+.best-seller-card-region {
     background: #2E1A2E;
     color: white;
     display: inline-block;
@@ -528,7 +525,7 @@ ul, ol {
 }
 
 .quote-home-wrapper {
-    min-height: 100vh;
+    min-height: 80vh;
     background: url(assets/images/quotes-img.png);
     background-size: cover;
     background-position: center;
@@ -583,12 +580,12 @@ ul, ol {
     font-size: larger;
 }
 
-.quote-home-info h3 {
+.quote-name {
     font-family: "Fraunces", serif;
     font-weight: 600;
 }
 
-.quote-home-info h4 {
+.quote-role {
     font-family: "Plus Jakarta Sans", serif;
     font-weight: 600;
     text-decoration: underline solid #A8823C 3px;
@@ -606,7 +603,7 @@ ul, ol {
     gap: 20px;
 }
 
-.footer-top h4 {
+.footer-top h3 {
     color: #A8823C;
     font-weight: 500;
     font-family: "Plus Jakarta Sans", serif;
@@ -713,10 +710,11 @@ ul, ol {
 
 .footer-news-email-submit:hover {
     background-color: white;
-    border-color: white;
+    border-color: transparent;
     color: #1f111f;
     box-shadow: 0 12px 16px rgb(255 255 255 / 25%);
 }
+
 
 .footer-news-social {
     display: flex;
@@ -761,10 +759,10 @@ ul, ol {
     font-family: "Fraunces", serif;
     display: inline-block;
     color: #A8823C;
-    -webkit-text-stroke: 1px #2E1A2E;
     font-size: 36px;
     line-height: 60px;
     letter-spacing: 2px;
+    -webkit-text-stroke: 1px #2E1A2E;
 }
 
 @keyframes marquee {
@@ -788,18 +786,6 @@ ul, ol {
 
 .footer-bot p {
     font-size: 14px;
-}
-
-@media (max-width: 767.98px) {
-    .header-inner { padding: 12px 16px; gap: 8px; }
-    .brand-name { font-size: 18px; }
-    .main-nav { flex: 0 0 100%; background: #FFF8EF; padding: 12px 0; }
-    .hero-content p { font-size: 32px; }
-    .intro-content-right p { font-size: 20px; }
-    .advantages h1, .best-seller h1 { font-size: 30px; }
-    .advantages-card-wrapper p { font-size: 16px; }
-    .quote-home-content h1 { font-size: 28px; }
-    .footer-wrapper { padding: 2rem 1.5rem 1rem; }
 }
 
 /*----------ABOUT---------*/
@@ -871,8 +857,15 @@ ul, ol {
 
 .about-timeline-wrapper {
     background: #2E1A2E;
-    color: #FFF8EF;
     min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.about-timeline-wrapper img {
+    height: 100%;
 }
 
 .about-producers-wrapper {
@@ -1292,7 +1285,7 @@ ul, ol {
 
 .contact-email-container button:hover {
     background-color: white;
-    border-color: white;
+    border-color: transparent;
     color: #2E1A2E;
     box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
@@ -1344,6 +1337,7 @@ ul, ol {
 }
 
 .contact-map iframe {
+    width: 100%;
     height: 50vh;
     border: 4px solid #A8823C5f;
     transition: all 0.25s linear;
@@ -1534,4 +1528,115 @@ ul, ol {
     padding: 0 12px;
 }
 
+/*--Mobile---*/
+@media (max-width: 767.98px) {
+    .header-inner { padding: 12px 16px; gap: 8px; }
+    .brand-name { font-size: 18px; }
+    .main-nav { flex: 0 0 100%; background: #FFF8EF; padding: 12px 0; }
+    .hero-content p { font-size: 32px; }
+    .intro-content-right p { font-size: 20px; }
+    .advantages h1, .best-seller h1 { font-size: 30px; }
+    .advantages-card-wrapper p { font-size: 16px; }
+    .quote-home-content h1 { font-size: 28px; }
+    .footer-wrapper { padding: 2rem 1.5rem 1rem; }
+}
 
+/*----responsive----*/
+@media (max-width: 767.98px) {
+
+    /*ABOUT*/
+    .about-founder { flex-direction: column !important; }
+    .about-founder-desc {
+        width: 100%;
+        padding: 2.5rem 1.25rem;
+        gap: 1.5rem;
+    }
+    .about-founder-quote { font-size: 22px; }
+    .about-founder-story { font-size: 15px; }
+    .about-founder-img { width: 100%; }
+
+    .about-goal-wrapper { padding: 40px 16px 0 16px; }
+    .about-goal-intro { margin-bottom: 30px; }
+    .about-goal-intro h2 { font-size: 28px; }
+    .about-goal-intro p { font-size: 16px; text-indent: 30px; }
+    .about-goal-pillars { flex-direction: column; gap: 16px; }
+    .about-goal-pillar { padding: 1.5rem 1rem; }
+
+    .about-decoration { flex-direction: column !important; max-height: none; }
+    .about-decoration-text { width: 100%; padding: 3rem 1.5rem; }
+    .about-decoration-img { width: 100%; max-height: 50vh; }
+
+    .about-producers-wrapper { padding: 40px 16px; }
+    .about-producers-title { font-size: 24px; }
+
+    /*GALLERY*/
+    .gallery-header-wrapper { padding: 6rem 1rem 2rem; }
+    .gallery-photo-grid-wrapper { padding: 2.5rem 1rem; }
+    .gallery-photo-grid { gap: 16px; }
+    .gallery-photo-row { flex-wrap: wrap; gap: 16px; justify-content: space-between; }
+    .gallery-photo-item { width: calc(50% - 8px); }
+
+    .gallery-carousel-wrapper .carousel-item img { max-height: 60vh; object-fit: cover; }
+    .carousel-indicators [data-bs-target] { width: 14px; height: 14px; margin-right: 8px; }
+
+.gallery-mosaic-wrapper {
+        padding: 40px 16px;
+    }
+    
+    .gallery-mosaic {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 12px;
+    }
+
+    .gallery-mosaic > div {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        grid-column-start: auto !important;
+        grid-row-start: auto !important;
+        height: 180px; 
+    }
+
+    .gallery-mosaic-item-logo {
+        grid-column: span 2 !important;
+        height: 140px;
+    }
+
+    /*CONTACT*/
+    .contact-main-wrapper { padding: 6.5rem 1rem 2.5rem; }
+    .contact-main-info { flex-direction: column !important; }
+    .contact-main-info > div { width: 100%; }
+
+    .contact-email { flex-direction: column; }
+    .contact-email-container { width: 100%; padding: 3rem 1.5rem; box-sizing: border-box; }
+    .contact-email-image { width: 100%; }
+    .contact-email-image img { height: auto; aspect-ratio: 16/10; }
+
+    .contact-map-wrapper { padding: 3rem 1rem; }
+    .contact-map-text { flex-direction: column !important; align-items: stretch !important; gap: 12px; }
+    .contact-map-button { flex-direction: column !important; gap: 10px; }
+    .contact-map-text button { width: 100%; }
+    .contact-map-location h3 { font-size: 16px; }
+    .contact-map iframe { height: 40vh; }
+
+    /*MENU  */
+    .menu-header-img { height: 35vh; }
+    .menu-grid-wrapper { padding: 40px 12px; }
+    .menu-grid h1 { font-size: 28px; }
+    .menu-card-img { height: 180px; }
+
+    /*HOME*/
+    .buy-basket { padding: 0 20px; }
+    .advantages-card-wrapper { min-height: auto; }
+    .best-seller-card-image { height: 220px; }
+    .best-seller-menu-cta { padding: 10px 14px; font-size: 12px; }
+    .footer-about-brand h2 { font-size: 24px; }
+    .footer-sub-title { font-size: 20px; }
+    .footer-wrapper { padding: 2rem 1.25rem 1rem; }
+    .marquee-line span { font-size: 24px; line-height: 44px; }
+    .hero-content a { padding: 12px 34px; }
+    .quote-home-content .bi-quote { font-size: 48px; }
+    .quote-home-info { font-size: 14px; }
+    .intro-about-cta { padding: 12px 60px; }
+}
