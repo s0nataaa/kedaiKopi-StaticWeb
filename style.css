@@ -1207,3 +1207,223 @@ ul, ol {
     box-shadow: 0 12px 40px rgba(0,0,0,0.3);
     transform: scale(1.05);
 }
+
+/*---------Contact------*/
+
+.contact-main-wrapper {
+    background-color: #FFF8EF;
+
+}
+.contact-email-wrapper {
+    background-color: #2E1A2E;
+    color: white;
+}
+
+.contact-email {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+}
+
+.contact-email-container {
+    width: 25%;
+    padding: 5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-email-container h2 {
+    font-family: var(--font-1);
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.contact-email-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-email-container label {
+    display: block;
+    font-family: var(--font-2);
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.contact-email-container input, .contact-email-container textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: 3px solid #A8823C;
+    color: white;
+    font-family: var(--font-2);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-email-container input::placeholder, .contact-email-container textarea::placeholder {
+    color: #cccccc;
+}
+
+.contact-email-container textarea {
+    resize: vertical;
+}
+
+.contact-email-container button {
+    align-self: flex-start;
+    background-color: #A8823C;
+    border: 1px solid #A8823C;
+    color: white;
+    font-family: var(--font-2);
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    width: 100%;
+}
+
+.contact-email-container button:hover {
+    background-color: white;
+    border-color: white;
+    color: #2E1A2E;
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.contact-email-image {
+    width: 75%;
+}
+
+.contact-email-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-map-wrapper {
+    padding: 5rem 4.5rem;
+    background-color: #FFF8EF;
+}
+
+.contact-map-text h2{
+    font-family: var(--font-1);
+    color: #2E1A2E;
+    letter-spacing: 1.5px;
+    font-size: 32px;
+}
+
+.contact-map-location h3 {
+    font-family: var(--font-1);
+    color: #2E1A2E;
+
+}
+
+.contact-map-text button {
+    font-family: var(--font-2);
+    color: #2E1A2E;
+    border: 3px solid #2E1A2E;
+    background-color: transparent;
+    padding: 7px 10px;
+    transition: all 0.25s linear;
+}
+
+.contact-map-text button:hover {
+    background-color: #2E1A2E;
+    color: white;
+    box-shadow: 0 4px 10px #2E1A2E5f;
+    transform: translateY(-4px) scale(1.1);
+}
+
+.contact-map iframe {
+    height: 50vh;
+    border: 4px solid #A8823C5f;
+    transition: all 0.25s linear;
+    box-shadow: 0 4px 8px #2E1A2E5f;
+}
+
+.contact-map iframe:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 15px #2E1A2E5f;
+}
+
+.contact-main-wrapper {
+    background-color: #EDE6DA;
+    padding: 5rem 4.5rem;
+}
+
+.contact-main-text h1{
+    font-family: var(--font-1);
+    letter-spacing: 1.5px;
+}
+
+.contact-main-text p {
+    font-family: var(--font-2);
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.contact-main-info-text {
+    background-color: #2E1A2E;
+    padding: 1.5rem 1rem;
+    color: white;
+}
+
+.contact-main-info-text h2{
+    font-family: var(--font-1);
+    font-size: 21px;
+    color: white;
+    background-color: #A8823C;
+    text-align: center;
+    padding: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.contact-main-info-text h3 {
+    color: #A8823C;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-family: var(--font-1);
+}
+
+.contact-main-info-text p, .contact-main-info-text span {
+    color: white;
+    font-family: var(--font-2);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-main-info-service p {
+    margin-left: 1rem;
+}
+
+
+.contact-main-info-social img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 40px;
+    max-height: 40px;
+    transition: all 0.25s ease;
+    border-radius: 50%;
+}
+
+.contact-main-info-social a:hover img {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 0 0 2px #A8823C;
+}
+
+.contact-main-info img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px #2E1A2E5f;
+}
+
+
